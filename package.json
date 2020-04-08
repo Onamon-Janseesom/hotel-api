@@ -25,9 +25,12 @@
     "@nestjs/common": "^6.0.0",
     "@nestjs/core": "^6.0.0",
     "@nestjs/platform-express": "^6.0.0",
+    "@nestjs/typeorm": "^7.0.0",
+    "mysql": "^2.18.1",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
-    "rxjs": "^6.3.3"
+    "rxjs": "^6.3.3",
+    "typeorm": "^0.2.24"
   },
   "devDependencies": {
     "@nestjs/testing": "6.1.1",
@@ -43,7 +46,7 @@
     "tsc-watch": "2.2.1",
     "tsconfig-paths": "3.8.0",
     "tslint": "5.16.0",
-    "typescript": "3.4.3"
+    "typescript": "^3.4.3"
   },
   "jest": {
     "moduleFileExtensions": [
