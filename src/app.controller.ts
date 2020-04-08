@@ -5,6 +5,7 @@ import { Controller, Get, Body, HttpStatus, Res, Post, Query } from '@nestjs/com
 import { AppService } from './app.service';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
+import moment = require('moment');
 
 @Controller()
 export class AppController {
@@ -65,7 +66,7 @@ export class AppController {
     if(isAvailable === 'available'){
       status = 'booking success'
       let query = await this.hotelEntity.update({ hotelName: params.hotelName, room: params.roomNumber, status: 'available' }, 
-        {status: "booked", bookingUser: params.userName, bookedDate: Date.now()});
+        {status: "booked", bookingUser: params.userName, bookedDate: moment().format()});
     }
     else{
       status = 'booking failed'
